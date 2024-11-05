@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Fruit Bandits</title>
+</head>
+<body>
+
+  <!-- Comic Page Container -->
+  <div class="comic-container">
+    <!-- Comic Page 1 -->
+    <img
+      src="images/comic-page1.png" onmouseover="this.src='images/comic-page1.gif'" onmouseout="this.src='images/comic-page1.png'"     
+      class="comic-image"
+      alt="Comic Page 1">
+
+    <!-- Comic Page 2 -->
+    <img
+      src="images/comic-page2.png" onmouseover="this.src='images/comic-page2.gif'" onmouseout="this.src='images/comic-page2.png'"     
+      class="comic-image"
+      alt="Comic Page 2">
+
+    <!-- Comic Page 3 -->
+    <img
+      src="images/comic-page3.png" onmouseover="this.src='images/comic-page3.gif'" onmouseout="this.src='images/comic-page3.png'"     
+      class="comic-image"
+      alt="Comic Page 3">
+
+    <!-- Comic Page 4 -->
+    <img
+      src="images/comic-page4.png" onmouseover="this.src='images/comic-page4.gif'" onmouseout="this.src='images/comic-page4.png'"     
+      class="comic-image"
+      alt="Comic Page 4">
+  </div>
+
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    /* Scrollable Comic Container */
+    .comic-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      overflow-y: auto;
+      height: 100vh;
+      gap: 20px;
+    }
+
+    /* Comic Image: fit one page per view */
+    .comic-image {
+      max-width: 100%;
+      max-height: calc(100vh - 60px); /* 100vh minus padding for a full view */
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      transition: opacity 0.3s ease;
+      cursor: pointer;
+    }
+
+  </style>
+
+</body>
+</html>
